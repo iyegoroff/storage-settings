@@ -1,6 +1,6 @@
 {
   "name": "storage-settings",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Storage API based settings manager",
   "sideEffects": false,
   "types": "./dist/dts/index.d.ts",
