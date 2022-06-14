@@ -37,7 +37,9 @@ type GetItemReturnType = ReturnType<ReturnType<typeof createStorageMap>['getItem
 type FilterKeyNotExistError<T> = T extends FailureResult<{ readonly keyNotExistError: undefined }>
   ? never
   : T
-type SetSuccess<T, Success> = T extends SuccessResult<unknown> ? SuccessResult<Success> : T
+type SetSuccess<T, Success> = T extends SuccessResult<unknown>
+  ? PrettyType<SuccessResult<Success>>
+  : T
 
 type StorageSettings<Settings extends Readonly<Record<string, Setting>>> = UnionToIntersection<
   {
